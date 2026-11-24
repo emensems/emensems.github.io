@@ -1,0 +1,1522 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第一导航 - 视频品牌官方网站 | 企业级内容生态平台</title>
+<meta name="description" content="第一导航官方网站，专注视频内容生态的企业品牌平台，汇聚专业创作者与精品高清内容，深耕垂直领域，为用户提供值得信赖的视频导航与社区体验。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f1b2d'/%3E%3Cpath d='M20 18h9v28h-9zM35 18l14 14-14 14z' fill='%2332e0c8'/%3E%3C/svg%3E">
+<style>
+:root{
+  --dn-bg:#0d1520;
+  --dn-bg-2:#111c2a;
+  --dn-panel:#152233;
+  --dn-panel-2:#1b2b3f;
+  --dn-line:#26384f;
+  --dn-text:#e8eef5;
+  --dn-muted:#9fb0c3;
+  --dn-neon:#32e0c8;
+  --dn-neon-2:#7cffd9;
+  --dn-accent:#ffb03a;
+  --dn-danger:#ff5f6d;
+  --dn-radius:16px;
+  --dn-sticky:104px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:var(--dn-sticky)}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:var(--dn-bg);
+  color:var(--dn-text);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+.dn-container{width:min(1200px,92vw);margin-inline:auto}
+.dn-section{padding:64px 0}
+.dn-section-alt{background:var(--dn-bg-2)}
+.dn-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--dn-neon);font-weight:600;margin-bottom:12px;
+}
+.dn-eyebrow::before{content:"";width:22px;height:2px;background:var(--dn-neon)}
+.dn-h2{font-size:clamp(24px,3.2vw,36px);line-height:1.3;font-weight:800;letter-spacing:.01em}
+.dn-h3{font-size:18px;font-weight:700;line-height:1.45}
+.dn-lead{color:var(--dn-muted);font-size:15.5px;max-width:70ch}
+.dn-section-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:18px;margin-bottom:36px}
+.dn-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:11px 22px;border-radius:999px;font-size:14px;font-weight:600;
+  border:1px solid var(--dn-line);transition:.25s;white-space:nowrap;
+}
+.dn-btn-solid{background:var(--dn-neon);color:#05231f;border-color:transparent}
+.dn-btn-solid:hover{background:var(--dn-neon-2);transform:translateY(-2px)}
+.dn-btn-ghost{color:var(--dn-text);background:rgba(255,255,255,.03)}
+.dn-btn-ghost:hover{border-color:var(--dn-neon);color:var(--dn-neon);transform:translateY(-2px)}
+.dn-tag{
+  display:inline-block;padding:3px 10px;border-radius:6px;font-size:12px;
+  background:rgba(50,224,200,.1);color:var(--dn-neon);border:1px solid rgba(50,224,200,.25);
+}
+.dn-tag-amber{background:rgba(255,176,58,.1);color:var(--dn-accent);border-color:rgba(255,176,58,.3)}
+
+/* 吸顶公告 + 页头 */
+.dn-sticky-wrap{position:sticky;top:0;z-index:100}
+.dn-announce{
+  background:linear-gradient(90deg,#122a33,#16343f 55%,#122a33);
+  border-bottom:1px solid var(--dn-line);
+  font-size:13px;color:var(--dn-muted);
+}
+.dn-announce-inner{
+  display:flex;align-items:center;gap:12px;padding:9px 0;overflow:hidden;
+}
+.dn-announce-badge{
+  flex:none;padding:1px 9px;border-radius:5px;background:var(--dn-neon);color:#05231f;
+  font-size:11px;font-weight:800;letter-spacing:.06em;
+}
+.dn-announce-track{display:flex;gap:38px;white-space:nowrap;animation:dnMarquee 26s linear infinite;will-change:transform}
+.dn-announce-track:hover{animation-play-state:paused}
+.dn-announce-track b{color:var(--dn-text);font-weight:600}
+@keyframes dnMarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+.dn-header{background:rgba(13,21,32,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--dn-line)}
+.dn-header-inner{display:flex;align-items:center;gap:22px;padding:12px 0}
+.dn-logo{display:flex;align-items:center;gap:10px;font-size:19px;font-weight:900;letter-spacing:.02em;flex:none}
+.dn-logo-mark{
+  width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,#32e0c8,#2a8fb8);
+  display:grid;place-items:center;color:#04211f;font-weight:900;font-size:16px;
+}
+.dn-logo small{display:block;font-size:10px;font-weight:500;color:var(--dn-muted);letter-spacing:.2em}
+.dn-nav{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
+.dn-nav a{
+  padding:7px 13px;border-radius:8px;font-size:14px;color:var(--dn-muted);transition:.2s;
+}
+.dn-nav a:hover{color:var(--dn-neon);background:rgba(50,224,200,.08)}
+.dn-head-actions{display:flex;align-items:center;gap:10px;flex:none}
+.dn-search{position:relative;display:flex;align-items:center}
+.dn-search input{
+  width:190px;padding:8px 34px 8px 14px;border-radius:999px;
+  background:var(--dn-panel);border:1px solid var(--dn-line);color:var(--dn-text);
+  font-size:13px;outline:none;transition:.25s;
+}
+.dn-search input:focus{width:230px;border-color:var(--dn-neon);box-shadow:0 0 0 3px rgba(50,224,200,.12)}
+.dn-search button{position:absolute;right:6px;font-size:14px;color:var(--dn-neon);padding:4px}
+.dn-search-tip{
+  position:absolute;top:calc(100% + 10px);right:0;width:290px;
+  background:var(--dn-panel-2);border:1px solid var(--dn-line);border-radius:12px;
+  padding:10px 14px;font-size:13px;color:var(--dn-muted);
+  box-shadow:0 18px 40px rgba(0,0,0,.5);display:none;
+}
+.dn-search-tip.dn-open{display:block}
+.dn-search-tip strong{color:var(--dn-neon)}
+.dn-menu-toggle{display:none;font-size:22px;padding:6px 10px;border:1px solid var(--dn-line);border-radius:8px;color:var(--dn-neon)}
+
+@media(max-width:960px){
+  .dn-menu-toggle{display:block;margin-left:auto}
+  .dn-nav{
+    display:none;position:absolute;left:0;right:0;top:100%;
+    background:var(--dn-panel);border-bottom:1px solid var(--dn-line);
+    flex-direction:column;padding:12px;margin:0;
+  }
+  .dn-nav.dn-open{display:flex}
+  .dn-header-inner{flex-wrap:wrap;position:relative}
+  .dn-head-actions{order:3;width:100%;margin-top:10px}
+  .dn-search,.dn-search input{width:100%}
+  .dn-search input:focus{width:100%}
+  .dn-search-tip{left:0;right:0;width:100%}
+  :root{--dn-sticky:150px}
+}
+
+/* 首屏 */
+.dn-hero{position:relative;overflow:hidden;padding:56px 0 72px}
+.dn-hero::before{
+  content:"";position:absolute;inset:-20% -10% auto -10%;height:520px;
+  background:radial-gradient(60% 60% at 68% 20%,rgba(50,224,200,.16),transparent 70%),
+             radial-gradient(45% 45% at 18% 30%,rgba(255,176,58,.1),transparent 70%);
+  pointer-events:none;
+}
+.dn-hero-grid{
+  position:relative;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);
+  gap:48px;align-items:center;
+}
+.dn-hero-badge{
+  display:inline-flex;align-items:center;gap:8px;padding:5px 14px;border-radius:999px;
+  background:rgba(50,224,200,.1);border:1px solid rgba(50,224,200,.3);
+  color:var(--dn-neon);font-size:12.5px;font-weight:600;margin-bottom:20px;
+}
+.dn-hero h1{font-size:clamp(38px,6.4vw,72px);line-height:1.06;font-weight:900;letter-spacing:-.02em}
+.dn-hero h1 em{
+  font-style:normal;background:linear-gradient(100deg,#32e0c8,#7cffd9 45%,#ffb03a);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.dn-hero-sub{margin-top:18px;font-size:16.5px;color:var(--dn-muted);max-width:56ch}
+.dn-hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.dn-stats{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:38px;
+  border-top:1px solid var(--dn-line);padding-top:26px;
+}
+.dn-stat b{display:block;font-size:clamp(22px,3vw,30px);font-weight:900;color:var(--dn-neon);line-height:1.2}
+.dn-stat span{font-size:12.5px;color:var(--dn-muted)}
+.dn-hero-visual{position:relative}
+.dn-hero-frame{
+  border-radius:22px;overflow:hidden;border:1px solid var(--dn-line);
+  box-shadow:0 30px 70px -20px rgba(0,0,0,.75);
+  background:var(--dn-panel);
+}
+.dn-hero-frame svg{width:100%;height:auto}
+.dn-hero-float{
+  position:absolute;left:-18px;bottom:-20px;background:var(--dn-panel-2);
+  border:1px solid var(--dn-line);border-radius:14px;padding:12px 16px;
+  display:flex;align-items:center;gap:10px;box-shadow:0 16px 40px rgba(0,0,0,.55);
+  font-size:12.5px;color:var(--dn-muted);
+}
+.dn-hero-float .dn-dot{width:8px;height:8px;border-radius:50%;background:var(--dn-neon);box-shadow:0 0 0 4px rgba(50,224,200,.18)}
+@media(max-width:900px){
+  .dn-hero-grid{grid-template-columns:1fr;gap:36px}
+  .dn-hero-float{left:8px;bottom:-14px}
+}
+
+/* 视频区布局：一幅重点大图 + 文字列表 */
+.dn-feature-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:34px;align-items:start}
+.dn-feature-card{
+  background:var(--dn-panel);border:1px solid var(--dn-line);border-radius:var(--dn-radius);
+  overflow:hidden;transition:.3s;
+}
+.dn-feature-card:hover{transform:translateY(-4px);border-color:rgba(50,224,200,.45);box-shadow:0 24px 50px -22px rgba(0,0,0,.8)}
+.dn-cover{position:relative;aspect-ratio:16/9;background:var(--dn-panel-2);overflow:hidden}
+.dn-cover svg{width:100%;height:100%}
+.dn-cover .dn-play{
+  position:absolute;inset:0;display:grid;place-items:center;
+}
+.dn-cover .dn-play span{
+  width:58px;height:58px;border-radius:50%;background:rgba(10,20,30,.62);
+  border:1.5px solid rgba(255,255,255,.55);display:grid;place-items:center;
+  color:#fff;font-size:20px;transition:.25s;backdrop-filter:blur(4px);
+}
+.dn-feature-card:hover .dn-play span{background:var(--dn-neon);color:#05231f;border-color:var(--dn-neon);transform:scale(1.08)}
+.dn-cover-meta{
+  position:absolute;left:12px;bottom:10px;display:flex;gap:8px;flex-wrap:wrap;
+}
+.dn-cover-meta .dn-tag{background:rgba(8,18,26,.8);border-color:rgba(255,255,255,.18);color:#dfeaf5;backdrop-filter:blur(4px)}
+.dn-feature-body{padding:20px 22px 22px}
+.dn-feature-body h3{font-size:20px;line-height:1.4;margin-bottom:10px}
+.dn-feature-body p{font-size:14px;color:var(--dn-muted)}
+.dn-meta-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:16px;font-size:12.5px;color:var(--dn-muted)}
+.dn-meta-row .dn-author{color:var(--dn-text);font-weight:600}
+.dn-actions{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
+.dn-act{
+  display:inline-flex;align-items:center;gap:6px;padding:6px 13px;border-radius:999px;
+  border:1px solid var(--dn-line);font-size:12.5px;color:var(--dn-muted);transition:.2s;
+}
+.dn-act:hover{border-color:var(--dn-neon);color:var(--dn-neon)}
+.dn-act.dn-active{color:var(--dn-neon);border-color:rgba(50,224,200,.5);background:rgba(50,224,200,.08)}
+
+.dn-vlist{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--dn-line)}
+.dn-vitem{
+  display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;
+  padding:16px 4px;border-bottom:1px solid var(--dn-line);transition:.2s;
+}
+.dn-vitem:hover{background:rgba(50,224,200,.04)}
+.dn-vitem-index{font-size:19px;font-weight:900;color:var(--dn-line);line-height:1.3}
+.dn-vitem:hover .dn-vitem-index{color:var(--dn-neon)}
+.dn-vitem h3{font-size:15.5px;line-height:1.45;margin-bottom:5px}
+.dn-vitem p{font-size:12.8px;color:var(--dn-muted);margin-bottom:8px}
+.dn-vitem-foot{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:12px;color:var(--dn-muted);align-items:center}
+.dn-vitem-foot .dn-tag{font-size:11px;padding:2px 8px}
+.dn-mini-btn{padding:3px 10px;border-radius:6px;border:1px solid var(--dn-line);font-size:11.5px;transition:.2s}
+.dn-mini-btn:hover{border-color:var(--dn-neon);color:var(--dn-neon)}
+@media(max-width:900px){.dn-feature-grid{grid-template-columns:1fr}}
+
+/* 关键词解析 */
+.dn-parse{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px}
+.dn-parse-block p{font-size:14.8px;color:var(--dn-muted);margin-bottom:14px}
+.dn-parse-block p strong{color:var(--dn-text);font-weight:700}
+.dn-parse-side{
+  background:var(--dn-panel);border:1px solid var(--dn-line);border-radius:var(--dn-radius);
+  padding:26px;align-self:start;
+}
+.dn-parse-side h3{font-size:16px;margin-bottom:16px}
+.dn-check{display:flex;flex-direction:column;gap:13px}
+.dn-check li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;font-size:13.5px;color:var(--dn-muted)}
+.dn-check li i{font-style:normal;color:var(--dn-neon);font-weight:900}
+.dn-check li b{color:var(--dn-text);font-weight:600}
+@media(max-width:900px){.dn-parse{grid-template-columns:1fr}}
+
+/* 专题 */
+.dn-topic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.dn-topic{
+  background:var(--dn-panel);border:1px solid var(--dn-line);border-radius:var(--dn-radius);
+  padding:22px;display:flex;flex-direction:column;gap:12px;transition:.28s;
+}
+.dn-topic:hover{border-color:rgba(255,176,58,.45);transform:translateY(-3px)}
+.dn-topic h3{font-size:17px;line-height:1.4}
+.dn-topic .dn-topic-desc{font-size:13.2px;color:var(--dn-muted)}
+.dn-topic-list{display:flex;flex-direction:column;gap:8px;margin-top:4px}
+.dn-topic-list li{
+  font-size:12.8px;color:var(--dn-muted);padding-left:16px;position:relative;
+}
+.dn-topic-list li::before{content:"▸";position:absolute;left:0;color:var(--dn-neon)}
+.dn-topic-status{
+  margin-top:auto;padding-top:12px;border-top:1px dashed var(--dn-line);
+  font-size:12px;color:var(--dn-accent);display:flex;justify-content:space-between;gap:10px;
+}
+@media(max-width:900px){.dn-topic-grid{grid-template-columns:1fr}}
+
+/* 作者矩阵：单行名录 */
+.dn-authors{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.dn-author-card{
+  background:var(--dn-panel);border:1px solid var(--dn-line);border-radius:var(--dn-radius);
+  padding:22px 20px;text-align:left;transition:.28s;display:flex;flex-direction:column;gap:10px;
+}
+.dn-author-card:hover{border-color:rgba(50,224,200,.5);transform:translateY(-4px);box-shadow:0 20px 44px -24px rgba(0,0,0,.85)}
+.dn-avatar{
+  width:52px;height:52px;border-radius:50%;display:grid;place-items:center;
+  font-weight:900;font-size:19px;color:#04211f;
+}
+.dn-author-card h3{font-size:15.5px}
+.dn-author-card .dn-field{font-size:12.5px;color:var(--dn-neon)}
+.dn-author-card p{font-size:12.6px;color:var(--dn-muted)}
+.dn-author-nums{display:flex;gap:16px;font-size:11.5px;color:var(--dn-muted);border-top:1px solid var(--dn-line);padding-top:10px;margin-top:auto}
+.dn-author-nums b{color:var(--dn-text);font-weight:700}
+.dn-author-more{font-size:12px;color:var(--dn-neon);margin-top:2px}
+@media(max-width:980px){.dn-authors{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.dn-authors{grid-template-columns:1fr}}
+
+/* 榜单/图文索引 */
+.dn-rank-layout{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:30px}
+.dn-rank{background:var(--dn-panel);border:1px solid var(--dn-line);border-radius:var(--dn-radius);overflow:hidden}
+.dn-rank-head{display:flex;gap:6px;padding:14px 16px;border-bottom:1px solid var(--dn-line);flex-wrap:wrap}
+.dn-rank-tab{padding:6px 14px;border-radius:999px;font-size:13px;color:var(--dn-muted);transition:.2s}
+.dn-rank-tab.dn-active{background:rgba(50,224,200,.12);color:var(--dn-neon);font-weight:600}
+.dn-rank-list li{
+  display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:12px;align-items:center;
+  padding:13px 16px;border-bottom:1px solid var(--dn-line);font-size:13.5px;
+}
+.dn-rank-list li:last-child{border-bottom:none}
+.dn-rank-no{font-weight:900;color:var(--dn-line);font-size:15px}
+.dn-rank-list li:nth-child(-n+3) .dn-rank-no{color:var(--dn-accent)}
+.dn-rank-list small{color:var(--dn-muted);font-size:11.5px}
+.dn-rank-score{font-size:12.5px;color:var(--dn-neon);font-weight:700}
+
+.dn-index-list{display:flex;flex-direction:column;gap:16px}
+.dn-index-item{
+  display:grid;grid-template-columns:96px minmax(0,1fr);gap:14px;
+  background:var(--dn-panel);border:1px solid var(--dn-line);border-radius:12px;
+  padding:12px;transition:.25s;
+}
+.dn-index-item:hover{border-color:rgba(50,224,200,.45);transform:translateX(3px)}
+.dn-index-thumb{border-radius:8px;overflow:hidden;aspect-ratio:4/3;background:var(--dn-panel-2)}
+.dn-index-thumb svg{width:100%;height:100%}
+.dn-index-item h3{font-size:14px;line-height:1.45;margin-bottom:4px}
+.dn-index-item p{font-size:12.3px;color:var(--dn-muted)}
+@media(max-width:900px){.dn-rank-layout{grid-template-columns:1fr}}
+
+/* 评论：双列短评 */
+.dn-comments{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.dn-comment{
+  background:var(--dn-panel);border:1px solid var(--dn-line);border-radius:14px;padding:18px 20px;
+  display:flex;flex-direction:column;gap:10px;transition:.25s;
+}
+.dn-comment:hover{border-color:rgba(50,224,200,.35)}
+.dn-comment-head{display:flex;align-items:center;gap:10px}
+.dn-comment-avatar{
+  width:34px;height:34px;border-radius:50%;display:grid;place-items:center;
+  font-size:13px;font-weight:800;color:#06231f;flex:none;
+}
+.dn-comment-head b{font-size:13.5px}
+.dn-comment-head span{font-size:11.5px;color:var(--dn-muted);margin-left:auto}
+.dn-comment p{font-size:13.3px;color:var(--dn-muted)}
+.dn-stars{color:var(--dn-accent);font-size:12px;letter-spacing:2px}
+@media(max-width:760px){.dn-comments{grid-template-columns:1fr}}
+
+/* 动态 + FAQ + 合作 */
+.dn-two-col{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px}
+.dn-news{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--dn-line)}
+.dn-news li{
+  padding:16px 0;border-bottom:1px solid var(--dn-line);
+  display:grid;grid-template-columns:88px minmax(0,1fr);gap:16px;align-items:start;
+}
+.dn-news time{font-size:12px;color:var(--dn-accent);font-weight:600;letter-spacing:.04em}
+.dn-news h3{font-size:14.5px;line-height:1.5;margin-bottom:3px}
+.dn-news p{font-size:12.6px;color:var(--dn-muted)}
+.dn-faq details{
+  border:1px solid var(--dn-line);border-radius:12px;margin-bottom:10px;
+  background:var(--dn-panel);overflow:hidden;
+}
+.dn-faq summary{
+  padding:15px 18px;font-size:14px;font-weight:600;cursor:pointer;list-style:none;
+  display:flex;justify-content:space-between;gap:14px;align-items:center;transition:.2s;
+}
+.dn-faq summary::-webkit-details-marker{display:none}
+.dn-faq summary::after{content:"+";color:var(--dn-neon);font-size:18px;font-weight:400;transition:.25s}
+.dn-faq details[open] summary::after{transform:rotate(45deg)}
+.dn-faq details[open] summary{color:var(--dn-neon)}
+.dn-faq .dn-faq-body{padding:0 18px 16px;font-size:13.2px;color:var(--dn-muted)}
+@media(max-width:900px){.dn-two-col{grid-template-columns:1fr;gap:44px}}
+
+.dn-partners{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.dn-partner{
+  border:1px solid var(--dn-line);border-radius:12px;padding:20px 16px;text-align:center;
+  background:var(--dn-panel);transition:.25s;
+}
+.dn-partner:hover{border-color:rgba(50,224,200,.4);transform:translateY(-3px)}
+.dn-partner b{display:block;font-size:15px;letter-spacing:.04em;margin-bottom:5px}
+.dn-partner span{font-size:11.5px;color:var(--dn-muted)}
+@media(max-width:760px){.dn-partners{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* 投稿 CTA */
+.dn-cta{
+  background:linear-gradient(120deg,#10283a,#0f2027 60%,#112132);
+  border:1px solid var(--dn-line);border-radius:22px;padding:44px;
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;
+}
+.dn-cta h2{font-size:clamp(22px,3vw,30px);line-height:1.35;font-weight:900}
+.dn-cta p{font-size:14px;color:var(--dn-muted);margin-top:8px;max-width:52ch}
+
+/* 页脚 */
+.dn-footer{background:#08111a;border-top:1px solid var(--dn-line);padding:56px 0 28px}
+.dn-footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}
+.dn-footer h3{font-size:13px;letter-spacing:.14em;color:var(--dn-text);margin-bottom:14px;text-transform:uppercase}
+.dn-footer p,.dn-footer li{font-size:13px;color:var(--dn-muted);line-height:1.9}
+.dn-footer li a:hover{color:var(--dn-neon)}
+.dn-footer-bottom{
+  margin-top:40px;padding-top:22px;border-top:1px solid var(--dn-line);
+  display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:12.3px;color:var(--dn-muted);
+}
+@media(max-width:900px){.dn-footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.dn-footer-grid{grid-template-columns:1fr}}
+
+/* 悬浮按钮 & Toast & 弹窗 */
+.dn-totop{
+  position:fixed;right:22px;bottom:26px;width:46px;height:46px;border-radius:50%;
+  background:var(--dn-panel-2);border:1px solid var(--dn-line);color:var(--dn-neon);
+  display:grid;place-items:center;font-size:18px;z-index:90;opacity:0;pointer-events:none;
+  transition:.3s;box-shadow:0 12px 28px rgba(0,0,0,.5);
+}
+.dn-totop.dn-show{opacity:1;pointer-events:auto}
+.dn-totop:hover{border-color:var(--dn-neon);transform:translateY(-3px)}
+.dn-toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);
+  background:var(--dn-neon);color:#04211f;padding:11px 22px;border-radius:999px;
+  font-size:13.5px;font-weight:700;z-index:200;opacity:0;pointer-events:none;transition:.3s;
+  box-shadow:0 16px 40px rgba(50,224,200,.25);
+}
+.dn-toast.dn-show{opacity:1;transform:translate(-50%,0)}
+.dn-modal{
+  position:fixed;inset:0;z-index:300;display:none;place-items:center;padding:20px;
+  background:rgba(4,10,16,.78);backdrop-filter:blur(6px);
+}
+.dn-modal.dn-open{display:grid}
+.dn-modal-card{
+  width:min(520px,100%);background:var(--dn-panel-2);border:1px solid var(--dn-line);
+  border-radius:18px;padding:28px;position:relative;max-height:86vh;overflow:auto;
+}
+.dn-modal-card h3{font-size:19px;margin-bottom:8px}
+.dn-modal-card p{font-size:13.5px;color:var(--dn-muted);margin-bottom:16px}
+.dn-modal-card label{display:block;font-size:12.5px;color:var(--dn-muted);margin:12px 0 6px}
+.dn-modal-card input,.dn-modal-card textarea,.dn-modal-card select{
+  width:100%;padding:10px 12px;border-radius:9px;border:1px solid var(--dn-line);
+  background:var(--dn-panel);color:var(--dn-text);font-size:13.5px;outline:none;font-family:inherit;
+}
+.dn-modal-card input:focus,.dn-modal-card textarea:focus,.dn-modal-card select:focus{border-color:var(--dn-neon)}
+.dn-modal-close{
+  position:absolute;right:14px;top:12px;font-size:20px;color:var(--dn-muted);padding:4px 8px;
+}
+.dn-modal-close:hover{color:var(--dn-neon)}
+.dn-modal-actions{display:flex;gap:10px;margin-top:20px;justify-content:flex-end;flex-wrap:wrap}
+.dn-share-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.dn-share-row button{
+  flex:1 1 90px;padding:12px 8px;border-radius:10px;border:1px solid var(--dn-line);
+  font-size:13px;background:var(--dn-panel);transition:.2s;
+}
+.dn-share-row button:hover{border-color:var(--dn-neon);color:var(--dn-neon)}
+.dn-sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="dn-sticky-wrap">
+  <div class="dn-announce">
+    <div class="dn-container dn-announce-inner">
+      <span class="dn-announce-badge">公告</span>
+      <div class="dn-announce-track" id="dnAnnounceTrack">
+        <span><b>「城市夜行」第二季</b> 上线，首批 8 支 4K 高清短片同步开播</span>
+        <span><b>创作激励计划</b> 报名开启，单条精品内容最高奖励 5000 元</span>
+        <span><b>第一导航·创作者大会</b> 12 月 6 日开放线下报名</span>
+        <span><b>「匠心手作」专题</b> 更新第 3 期，新增 5 位入驻创作者</span>
+        <span><b>年度口碑榜</b> 投票通道已开放，每人每日可投 3 票</span>
+        <span><b>「城市夜行」第二季</b> 上线，首批 8 支 4K 高清短片同步开播</span>
+        <span><b>创作激励计划</b> 报名开启，单条精品内容最高奖励 5000 元</span>
+        <span><b>第一导航·创作者大会</b> 12 月 6 日开放线下报名</span>
+        <span><b>「匠心手作」专题</b> 更新第 3 期，新增 5 位入驻创作者</span>
+        <span><b>年度口碑榜</b> 投票通道已开放，每人每日可投 3 票</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="dn-header">
+    <div class="dn-container dn-header-inner">
+      <a class="dn-logo" href="#dnTop">
+        <span class="dn-logo-mark">第</span>
+        <span>第一导航<small>VIDEO NAVIGATOR</small></span>
+      </a>
+      <button class="dn-menu-toggle" id="dnMenuToggle" aria-label="展开导航菜单" aria-expanded="false">☰</button>
+      <nav class="dn-nav" id="dnNav" aria-label="主导航">
+        <a href="#dnFocus">焦点内容</a>
+        <a href="#dnParse">品牌解析</a>
+        <a href="#dnTopics">专题企划</a>
+        <a href="#dnAuthors">创作者</a>
+        <a href="#dnRank">口碑榜单</a>
+        <a href="#dnComments">用户评价</a>
+        <a href="#dnNews">企业动态</a>
+        <a href="#dnFaq">常见问题</a>
+      </nav>
+      <div class="dn-head-actions">
+        <div class="dn-search">
+          <input type="search" id="dnSearchInput" placeholder="搜索视频 / 创作者 / 专题" aria-label="站内搜索">
+          <button id="dnSearchBtn" aria-label="执行搜索">⌕</button>
+          <div class="dn-search-tip" id="dnSearchTip"></div>
+        </div>
+        <button class="dn-btn dn-btn-solid" id="dnSubmitOpen">我要投稿</button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="dnTop">
+
+  <!-- 首屏 -->
+  <section class="dn-hero">
+    <div class="dn-container dn-hero-grid">
+      <div>
+        <span class="dn-hero-badge">● 第一导航 · 官方网站 · 持续运营中</span>
+        <h1>第一导航<em>视频品牌官网</em></h1>
+        <p class="dn-hero-sub">让每一次点击都抵达好内容。作为深耕视频内容领域的品牌平台，第一导航以专业策展与原创扶持，把散落的高清影像整理成一条清晰的观看路径。</p>
+        <div class="dn-hero-cta">
+          <a class="dn-btn dn-btn-solid" href="#dnFocus">进入焦点内容</a>
+          <a class="dn-btn dn-btn-ghost" href="#dnAuthors">认识创作者</a>
+          <button class="dn-btn dn-btn-ghost" id="dnShareOpenHero">分享本站</button>
+        </div>
+        <div class="dn-stats">
+          <div class="dn-stat"><b data-dn-count="12800">0</b><span>累计收录高清视频（条）</span></div>
+          <div class="dn-stat"><b data-dn-count="46">0</b><span>垂直领域内容频道</span></div>
+          <div class="dn-stat"><b data-dn-count="320">0</b><span>签约与入驻创作者</span></div>
+        </div>
+      </div>
+      <div class="dn-hero-visual">
+        <div class="dn-hero-frame">
+          <svg viewBox="0 0 800 500" role="img" aria-label="第一导航品牌首屏主视觉：城市夜景中的多层视频导航界面">
+            <defs>
+              <linearGradient id="dnHeroSky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#0a1622"/><stop offset="1" stop-color="#1b3348"/>
+              </linearGradient>
+              <linearGradient id="dnHeroGlow" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#32e0c8"/><stop offset="1" stop-color="#ffb03a"/>
+              </linearGradient>
+            </defs>
+            <rect width="800" height="500" fill="url(#dnHeroSky)"/>
+            <circle cx="640" cy="110" r="130" fill="#32e0c8" opacity="0.10"/>
+            <circle cx="150" cy="420" r="160" fill="#ffb03a" opacity="0.07"/>
+            <g fill="#122a3c">
+              <rect x="40" y="240" width="80" height="200"/><rect x="132" y="190" width="66" height="250"/>
+              <rect x="210" y="270" width="58" height="170"/><rect x="650" y="220" width="90" height="220"/>
+              <rect x="560" y="280" width="72" height="160"/>
+            </g>
+            <g fill="#32e0c8" opacity="0.55">
+              <rect x="54" y="258" width="10" height="10"/><rect x="76" y="258" width="10" height="10"/>
+              <rect x="54" y="282" width="10" height="10"/><rect x="98" y="282" width="10" height="10"/>
+              <rect x="146" y="208" width="9" height="9"/><rect x="166" y="208" width="9" height="9"/>
+              <rect x="146" y="232" width="9" height="9"/><rect x="178" y="252" width="9" height="9"/>
+              <rect x="668" y="244" width="10" height="10"/><rect x="694" y="244" width="10" height="10"/>
+              <rect x="668" y="270" width="10" height="10"/><rect x="712" y="270" width="10" height="10"/>
+            </g>
+            <g>
+              <rect x="300" y="120" width="330" height="200" rx="14" fill="#0e1f2c" stroke="#2b4a63"/>
+              <rect x="316" y="136" width="298" height="120" rx="8" fill="#133042"/>
+              <circle cx="465" cy="196" r="26" fill="#32e0c8" opacity="0.9"/>
+              <path d="M457 184 L481 196 L457 208 Z" fill="#06231f"/>
+              <rect x="316" y="268" width="150" height="9" rx="4" fill="#2b4a63"/>
+              <rect x="316" y="285" width="98" height="9" rx="4" fill="#21384c"/>
+              <rect x="484" y="268" width="130" height="26" rx="6" fill="url(#dnHeroGlow)" opacity="0.65"/>
+            </g>
+            <g>
+              <rect x="120" y="330" width="200" height="120" rx="12" fill="#0e1f2c" stroke="#2b4a63"/>
+              <rect x="134" y="344" width="172" height="66" rx="6" fill="#16394d"/>
+              <path d="M196 366 L226 377 L196 388 Z" fill="#ffb03a"/>
+              <rect x="134" y="420" width="104" height="8" rx="4" fill="#2b4a63"/>
+            </g>
+            <path d="M0 466 H800" stroke="#2b4a63" stroke-width="2"/>
+            <g stroke="#7cffd9" stroke-width="1.4" opacity="0.5">
+              <path d="M0 452 H800"/>
+            </g>
+          </svg>
+        </div>
+        <div class="dn-hero-float"><span class="dn-dot"></span>今日新增 26 条高清内容 · 官方审核通过</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 焦点内容 -->
+  <section class="dn-section dn-section-alt" id="dnFocus">
+    <div class="dn-container">
+      <div class="dn-section-head">
+        <div>
+          <span class="dn-eyebrow">Focus · 焦点内容</span>
+          <h2 class="dn-h2">第一导航编辑部本周力荐</h2>
+          <p class="dn-lead">由品牌内容团队与创作者共同筛选，兼顾口碑与观看体验的精品内容。每一项都来自第一导航的原创策展体系。</p>
+        </div>
+        <a class="dn-btn dn-btn-ghost" href="#dnRank">查看完整榜单</a>
+      </div>
+
+      <div class="dn-feature-grid">
+        <article class="dn-feature-card">
+          <div class="dn-cover">
+            <svg viewBox="0 0 640 360" role="img" aria-label="夜行城市街道霓虹与骑行者的视频封面">
+              <defs>
+                <linearGradient id="dnFc1" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#14213a"/><stop offset="1" stop-color="#2a1b33"/>
+                </linearGradient>
+              </defs>
+              <rect width="640" height="360" fill="url(#dnFc1)"/>
+              <g opacity="0.85">
+                <rect x="30" y="90" width="120" height="270" fill="#1b2b44"/>
+                <rect x="160" y="140" width="90" height="220" fill="#22354f"/>
+                <rect x="470" y="70" width="140" height="290" fill="#1b2b44"/>
+              </g>
+              <g fill="#ffb03a" opacity="0.75">
+                <rect x="46" y="110" width="12" height="12"/><rect x="74" y="110" width="12" height="12"/>
+                <rect x="46" y="140" width="12" height="12"/><rect x="102" y="140" width="12" height="12"/>
+                <rect x="490" y="96" width="12" height="12"/><rect x="522" y="96" width="12" height="12"/>
+                <rect x="490" y="126" width="12" height="12"/>
+              </g>
+              <path d="M0 300 Q160 280 320 296 T640 288 V360 H0 Z" fill="#101b2c"/>
+              <g stroke="#32e0c8" stroke-width="3" fill="none" opacity="0.8">
+                <circle cx="300" cy="272" r="20"/><circle cx="392" cy="272" r="20"/>
+                <path d="M300 272 L346 232 L392 272 M346 232 L352 272"/>
+              </g>
+              <circle cx="346" cy="214" r="9" fill="#7cffd9"/>
+              <path d="M200 300 H470" stroke="#2d4a63" stroke-width="2" stroke-dasharray="14 12"/>
+            </svg>
+            <div class="dn-play"><span>▶</span></div>
+            <div class="dn-cover-meta"><span class="dn-tag">4K 高清</span><span class="dn-tag">城市探索</span></div>
+          </div>
+          <div class="dn-feature-body">
+            <h3>「城市夜行」第二季 01：沿江十二公里，骑行穿过这座城的灯</h3>
+            <p>从老码头到新建的观景桥，镜头跟着三位本地骑行者，记录夜里十点到凌晨一点的城市呼吸。真实的街道声、未经修饰的路口与人，构成第一导航最具口碑的在地影像系列。</p>
+            <div class="dn-meta-row">
+              <span class="dn-author">创作者 · 江屿记录</span>
+              <span>播放 286,400</span>
+              <span>点赞 12,830</span>
+              <span>收藏 4,215</span>
+            </div>
+            <div class="dn-actions">
+              <button class="dn-act" data-dn-like="1">♡ 点赞 <b>12830</b></button>
+              <button class="dn-act" data-dn-fav="1">☆ 收藏</button>
+              <button class="dn-act" data-dn-share="1">⤴ 分享</button>
+              <button class="dn-act" data-dn-comment="1">💬 评论</button>
+            </div>
+          </div>
+        </article>
+
+        <ul class="dn-vlist">
+          <li class="dn-vitem">
+            <span class="dn-vitem-index">01</span>
+            <div>
+              <h3>一间木工坊的三十七天：把边角料做成一把椅子</h3>
+              <p>手作创作者「阿木工坊」从选料到上蜡的完整工序记录，含 6 处关键榫卯细节讲解。</p>
+              <div class="dn-vitem-foot">
+                <span class="dn-tag">匠心</span><span>阿木工坊</span><span>播放 96,200</span><span>点赞 5,410</span>
+                <button class="dn-act" data-dn-like="1">♡ <b>5410</b></button>
+                <button class="dn-act" data-dn-fav="1">☆</button>
+              </div>
+            </div>
+          </li>
+          <li class="dn-vitem">
+            <span class="dn-vitem-index">02</span>
+            <div>
+              <h3>《剪辑节奏的七个判断》第一导航公开课 · 完整版</h3>
+              <p>把叙事切点、呼吸留白、音画错位讲透，配套可直接下载的练习工程包。</p>
+              <div class="dn-vitem-foot">
+                <span class="dn-tag">教程干货</span><span>剪辑师老周</span><span>播放 154,700</span><span>点赞 9,120</span>
+                <button class="dn-act" data-dn-like="1">♡ <b>9120</b></button>
+                <button class="dn-act" data-dn-fav="1">☆</button>
+              </div>
+            </div>
+          </li>
+          <li class="dn-vitem">
+            <span class="dn-vitem-index">03</span>
+            <div>
+              <h3>在海拔 3800 米拍一场日出，设备清单与失败复盘</h3>
+              <p>不只是成片，还有三次失败的机位、冻关机与补电方案，真实得让人心安。</p>
+              <div class="dn-vitem-foot">
+                <span class="dn-tag">户外活动</span><span>北纬三十度</span><span>播放 78,930</span><span>点赞 4,602</span>
+                <button class="dn-act" data-dn-like="1">♡ <b>4602</b></button>
+                <button class="dn-act" data-dn-fav="1">☆</button>
+              </div>
+            </div>
+          </li>
+          <li class="dn-vitem">
+            <span class="dn-vitem-index">04</span>
+            <div>
+              <h3>菜市场里的十种早餐：一条街的清晨密度</h3>
+              <p>摊主的口音、蒸汽和排队的人，构成这座城市最诚实的早高峰。</p>
+              <div class="dn-vitem-foot">
+                <span class="dn-tag">美食烹饪</span><span>早八点半</span><span>播放 63,180</span><span>点赞 3,884</span>
+                <button class="dn-act" data-dn-like="1">♡ <b>3884</b></button>
+                <button class="dn-act" data-dn-fav="1">☆</button>
+              </div>
+            </div>
+          </li>
+          <li class="dn-vitem">
+            <span class="dn-vitem-index">05</span>
+            <div>
+              <h3>访谈：拍了十二年纪录片，我还是先听人说话</h3>
+              <p>四十分钟长谈，关于耐心、伦理与被拍摄者的尊严，第一导航年度深度访谈。</p>
+              <div class="dn-vitem-foot">
+                <span class="dn-tag">人物访谈</span><span>第一导航出品</span><span>播放 41,650</span><span>点赞 2,970</span>
+                <button class="dn-act" data-dn-like="1">♡ <b>2970</b></button>
+                <button class="dn-act" data-dn-fav="1">☆</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 品牌解析 -->
+  <section class="dn-section" id="dnParse">
+    <div class="dn-container">
+      <div class="dn-section-head">
+        <div>
+          <span class="dn-eyebrow">Brand · 品牌解析</span>
+          <h2 class="dn-h2">读懂「第一导航」这个名字</h2>
+          <p class="dn-lead">第一导航不是一个简单的链接集合，而是一套以视频为核心的内容导航方法与长期运营的品牌承诺。</p>
+        </div>
+      </div>
+
+      <div class="dn-parse">
+        <div class="dn-parse-block">
+          <h3 class="dn-h3">一、导航的本质：在过载的影像里给人一条清晰路径</h3>
+          <p>关于第一导航，最容易被误解的一点是把它当成一个普通的内容聚合页。事实上，第一导航的起点是「选择」：在每天数以万计的新视频里，判断哪些值得被放到更前面。作为一个以视频为核心的企业品牌平台，第一导航建立了一套由编辑部、签约创作者与社区用户共同参与的策展机制。编辑部负责行业观察与主题定调，创作者提供一线内容与创作幕后，用户则通过收藏、评论与投票形成口碑反馈。三者叠加后，第一导航才敢把一个内容放到导航栏的第一位。</p>
+          <p>这套机制在具体运作上并不神秘。每条进入焦点位的内容，都要经过三轮判断：第一轮看技术完成度，画质、收音、剪辑节奏是否达到<strong>高清</strong>与<strong>专业</strong>的基本线；第二轮看信息密度，是否有明确的知识点、情绪落点或现场质感；第三轮看长期价值，半年后回看是否仍然成立。第一导航把这三轮判断写进了公开的编辑手册，并允许创作者查看自己的落选理由。透明带来信任，这也是第一导航被用户称为<strong>值得信赖</strong>的原因之一。</p>
+          <p>导航也就不再只是「排序」。在 2026 年，第一导航把「导航」扩展成三层：内容导航、创作者导航与主题导航。内容导航解决「今天看什么」，创作者导航解决「跟着谁看」，主题导航解决「系统性地看完一件事」。三层互相嵌套，用户可以从一条城市夜行视频进入一位创作者主页，再顺着他参与的专题看到一整座城市的生活方式。这种路径设计，让第一导航在众多视频平台中保持了独特的<strong>垂直领域</strong>辨识度。</p>
+
+          <h3 class="dn-h3">二、内容生态：原创、正版与社区的三方平衡</h3>
+          <p>第一导航的内容生态由三条腿支撑。第一条是<strong>原创</strong>：品牌自制与签约创作两条线并行，品牌自制负责周期长、成本高的深度项目，比如「城市夜行」四季系列；签约创作负责高频、垂直的日常供给，比如手作、健身、烹饪等兴趣同好内容。第二条是<strong>正版</strong>：所有上架的影视片段、音乐与素材都有明确的授权链路，第一导航为此建立了内部素材台账，创作者可以在后台查询每一段配乐的使用范围。第三条是<strong>社区</strong>：评论、评价与投票不是附属功能，而是内容生态的一部分，用户的真实反馈会直接进入下一轮策展。</p>
+          <p>很多人问第一导航为什么不做无限下滑的推荐流。答案很简单：第一导航更愿意做「有限但够好」的策展。我们相信人的注意力是有限的，与其用算法不断制造下一次点击，不如把有限的注意力交还给用户。因此第一导航的首页始终保留清晰的栏目分区，用户可以明确知道自己进入的是哪个频道、正在看第几季第几集。这种克制在今天显得有点笨，但正是这份笨，让第一导航在<strong>持续运营</strong>的九年里积累了稳定的口碑。</p>
+          <p>在社区治理上，第一导航坚持「用户至上」与「社会责任」并重。平台设有内容安全与未成年人保护两条独立审核线，并对深度测评类内容要求标注测试条件与利益声明。第一导航不希望用户看到的只是一段好看的影像，而是能判断它为什么好看、在什么条件下成立。这种对<strong>真实</strong>的坚持，也成为许多创作者愿意长期留在第一导航的原因。</p>
+
+          <h3 class="dn-h3">三、创作者关系：从投稿到共生，而不是一次性的流量交易</h3>
+          <p>第一导航从 2017 年起就取消了单纯的播放量分成模式，转为「基础稿酬 + 专项激励 + 品牌合作」的组合。基础稿酬保证创作者能覆盖拍摄成本，专项激励用于支持长周期项目，品牌合作则由平台统一对接，避免创作者单独面对复杂的商务谈判。这套机制让创作者敢于拍那些「不一定会火」的题材 —— 比如独居老人的一天、山区小学的美术课、凌晨四点的批发市场。这些内容未必有爆款数据，却是第一导航内容生态里最有重量的部分。</p>
+          <p>在工具层面，第一导航为创作者提供脚本灵感库、标题建议、剪辑思路拆解与素材授权查询。这些工具不是要替代创作者的判断，而是把他们从重复劳动里解放出来，留出更多时间在现场。很多创作者提到，第一导航最实用的功能其实是「失败复盘」文档：拍砸的项目同样值得记录，因为下一次开机时，这些经验比任何教程都更直接。</p>
+          <p>我们还把「成长」写进了品牌愿景。第一导航理解的成长不是数据曲线，而是创作者从记录日常到形成方法论的跨度。平台每年会挑选十位新入驻创作者进入「陪伴计划」，配备一位资深创作者作为陪跑导师，周期一年。这个计划的淘汰率不高，因为我们更在意长期陪伴的质量，而不是短期产出的数量。</p>
+
+          <h3 class="dn-h3">四、为什么是「第一」：面向未来的内容基础设施</h3>
+          <p>「第一」不是排名宣称，而是一种自我要求：把每个环节做到可以被检验的第一顺位。第一导航在技术侧持续投入，包括自建的高清转码链路、多端一致的播放体验与无障碍字幕支持。我们要求所有重点内容默认提供中文字幕，并在可控范围内提供音频描述，让更多用户能够平等地进入影像世界。这些工作不会出现在热搜上，但它们构成了一家视频企业真正的<strong>品质</strong>底盘。</p>
+          <p>面向未来，第一导航将继续深耕视频导航这件事，把编辑经验、社区反馈与技术能力整合成更清晰的内容基础设施。我们会开放更多主题策展接口，让创作者可以自己发起专题；也会继续维护口碑榜与新人榜，让好的内容有稳定的被发现路径。第一导航希望成为一家<strong>行业领先</strong>、同时保持温度的视频品牌，在多元与包容的前提下，让每一种真实的生活都能被看见。这正是第一导航官方网站存在的意义，也是我们愿意长期做下去的理由。</p>
+        </div>
+
+        <aside class="dn-parse-side">
+          <h3 class="dn-h3">第一导航 · 品牌要点速览</h3>
+          <ul class="dn-check">
+            <li><i>◆</i><span><b>品牌定位：</b>以视频为核心的内容导航平台，企业级品牌官网。</span></li>
+            <li><i>◆</i><span><b>核心价值观：</b>真实、专业、用户至上、持续运营。</span></li>
+            <li><i>◆</i><span><b>内容边界：</b>原创优先，正版授权，社区共建。</span></li>
+            <li><i>◆</i><span><b>创作者支持：</b>基础稿酬 + 专项激励 + 品牌合作三重机制。</span></li>
+            <li><i>◆</i><span><b>技术保障：</b>自建高清转码、多端一致播放、无障碍字幕。</span></li>
+            <li><i>◆</i><span><b>社区治理：</b>内容安全与未成年人保护双审核线。</span></li>
+            <li><i>◆</i><span><b>年度计划：</b>陪伴计划、口碑榜、创作者大会、创作激励。</span></li>
+            <li><i>◆</i><span><b>品牌承诺：</b>有限但够好的策展，把注意力交还给用户。</span></li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 专题企划 -->
+  <section class="dn-section dn-section-alt" id="dnTopics">
+    <div class="dn-container">
+      <div class="dn-section-head">
+        <div>
+          <span class="dn-eyebrow">Series · 专题企划</span>
+          <h2 class="dn-h2">正在进行的第一导航专题</h2>
+          <p class="dn-lead">专题是品牌与创作者共同完成的长线叙事，每个专题至少持续更新三个月，并有明确的策展主张。</p>
+        </div>
+      </div>
+
+      <div class="dn-topic-grid">
+        <article class="dn-topic">
+          <span class="dn-tag-amber dn-tag">更新中 · 第 3 期</span>
+          <h3>城市夜行：把夜晚还给街道</h3>
+          <p class="dn-topic-desc">以夜间行动为线索，记录城市在灯熄之前的那几个小时。已上线 8 支 4K 短片。</p>
+          <ul class="dn-topic-list">
+            <li>沿江十二公里，骑行穿过这座城的灯</li>
+            <li>凌晨四点的批发市场，声音先醒过来</li>
+            <li>末班公交司机的一小时独白</li>
+          </ul>
+          <div class="dn-topic-status"><span>已更新 3 期</span><span>共计划 6 期</span></div>
+        </article>
+
+        <article class="dn-topic">
+          <span class="dn-tag-amber dn-tag">征集中 · 开放投稿</span>
+          <h3>一间小店：小微生意的一天</h3>
+          <p class="dn-topic-desc">走进街角的裁缝铺、修表摊、面馆后厨，记录商业观察最微小也最真实的单位。</p>
+          <ul class="dn-topic-list">
+            <li>修表摊的放大镜下，时间走得慢一些</li>
+            <li>一碗面从备料到打烊，账本翻到最后</li>
+            <li>开了十七年的裁缝铺，正在学着直播</li>
+          </ul>
+          <div class="dn-topic-status"><span>已收录 11 条投稿</span><span>截止 12 月 20 日</span></div>
+        </article>
+
+        <article class="dn-topic">
+          <span class="dn-tag-amber dn-tag">即将上线 · 预约</span>
+          <h3>匠心手册：手艺人的方法论</h3>
+          <p class="dn-topic-desc">面向手作 DIY 与兴趣同好，完整呈现工序、工具与判断标准，不止于成片。</p>
+          <ul class="dn-topic-list">
+            <li>榫卯入门：三个必须亲手做的接头</li>
+            <li>陶土到成器，窑温变化的十次记录</li>
+            <li>皮革封边为什么总是不平整</li>
+          </ul>
+          <div class="dn-topic-status"><span>预约人数 2,186</span><span>12 月 1 日首播</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作者矩阵 -->
+  <section class="dn-section" id="dnAuthors">
+    <div class="dn-container">
+      <div class="dn-section-head">
+        <div>
+          <span class="dn-eyebrow">Creators · 创作者</span>
+          <h2 class="dn-h2">第一导航创作者名录</h2>
+          <p class="dn-lead">他们来自不同行业，共同点是愿意把过程拍完整。点击卡片可查看创作者档案与代表作品。</p>
+        </div>
+      </div>
+
+      <div class="dn-authors">
+        <article class="dn-author-card">
+          <div class="dn-avatar" style="background:linear-gradient(135deg,#32e0c8,#2a8fb8)">江</div>
+          <h3>江屿记录</h3>
+          <span class="dn-field">城市探索 / 在地文化</span>
+          <p>常驻江边的自由摄影师，偏好夜间与雨天拍摄。相信城市的声音比画面更诚实，习惯带着一支定焦镜头走完一整条街。</p>
+          <div class="dn-author-nums"><span>作品 <b>46</b></span><span>粉丝 <b>8.2万</b></span></div>
+          <button class="dn-author-more" data-dn-author="江屿记录">查看作者档案 →</button>
+        </article>
+
+        <article class="dn-author-card">
+          <div class="dn-avatar" style="background:linear-gradient(135deg,#ffb03a,#ff7a45)">木</div>
+          <h3>阿木工坊</h3>
+          <span class="dn-field">手作 DIY / 生活方式</span>
+          <p>三代木工家庭出身，把工坊搬进镜头。视频里很少说话，多是工具的响声。坚持每条作品都附完整工序与材料清单。</p>
+          <div class="dn-author-nums"><span>作品 <b>38</b></span><span>粉丝 <b>5.6万</b></span></div>
+          <button class="dn-author-more" data-dn-author="阿木工坊">查看作者档案 →</button>
+        </article>
+
+        <article class="dn-author-card">
+          <div class="dn-avatar" style="background:linear-gradient(135deg,#7c8dff,#4b5fd6)">周</div>
+          <h3>剪辑师老周</h3>
+          <span class="dn-field">教程干货 / 创作幕后</span>
+          <p>十年商业剪辑经验，做过广告也做过纪录片。擅长把抽象的节奏感拆成可练习的动作，课程被多所院校作为辅助教材。</p>
+          <div class="dn-author-nums"><span>作品 <b>72</b></span><span>粉丝 <b>12.4万</b></span></div>
+          <button class="dn-author-more" data-dn-author="剪辑师老周">查看作者档案 →</button>
+        </article>
+
+        <article class="dn-author-card">
+          <div class="dn-avatar" style="background:linear-gradient(135deg,#6fe3a5,#2f9e6b)">北</div>
+          <h3>北纬三十度</h3>
+          <span class="dn-field">户外活动 / 旅行见闻</span>
+          <p>两人一车的户外组合，常年往返高原与海岸线。乐于分享失败经验，认为拍不到的日出比拍到的更值得讲。</p>
+          <div class="dn-author-nums"><span>作品 <b>54</b></span><span>粉丝 <b>9.1万</b></span></div>
+          <button class="dn-author-more" data-dn-author="北纬三十度">查看作者档案 →</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 榜单 + 图文索引 -->
+  <section class="dn-section dn-section-alt" id="dnRank">
+    <div class="dn-container">
+      <div class="dn-section-head">
+        <div>
+          <span class="dn-eyebrow">Ranking · 口碑榜单</span>
+          <h2 class="dn-h2">第一导航年度口碑榜</h2>
+          <p class="dn-lead">榜单由用户评分、收藏率与完播率综合得出，每周一更新。它代表社区的真实选择，而非流量堆叠。</p>
+        </div>
+      </div>
+
+      <div class="dn-rank-layout">
+        <div class="dn-rank">
+          <div class="dn-rank-head">
+            <button class="dn-rank-tab dn-active" data-dn-tab="hot">热度榜</button>
+            <button class="dn-rank-tab" data-dn-tab="new">新人榜</button>
+            <button class="dn-rank-tab" data-dn-tab="praise">口碑榜</button>
+          </div>
+          <ul class="dn-rank-list" id="dnRankList">
+            <li><span class="dn-rank-no">01</span><span>「城市夜行」第二季 01：沿江十二公里<small>江屿记录 · 城市探索</small></span><span class="dn-rank-score">9.7</span></li>
+            <li><span class="dn-rank-no">02</span><span>剪辑节奏的七个判断 · 完整版<small>剪辑师老周 · 教程干货</small></span><span class="dn-rank-score">9.6</span></li>
+            <li><span class="dn-rank-no">03</span><span>一间木工坊的三十七天<small>阿木工坊 · 手作 DIY</small></span><span class="dn-rank-score">9.5</span></li>
+            <li><span class="dn-rank-no">04</span><span>海拔 3800 米的一场日出<small>北纬三十度 · 户外活动</small></span><span class="dn-rank-score">9.3</span></li>
+            <li><span class="dn-rank-no">05</span><span>菜市场里的十种早餐<small>早八点半 · 美食烹饪</small></span><span class="dn-rank-score">9.1</span></li>
+            <li><span class="dn-rank-no">06</span><span>访谈：拍了十二年纪录片之后<small>第一导航出品 · 人物访谈</small></span><span class="dn-rank-score">9.0</span></li>
+          </ul>
+        </div>
+
+        <div class="dn-index-list">
+          <article class="dn-index-item">
+            <div class="dn-index-thumb">
+              <svg viewBox="0 0 200 150" role="img" aria-label="旧书摊与晨光的专题缩略图">
+                <rect width="200" height="150" fill="#1a2b3d"/>
+                <rect x="20" y="96" width="160" height="8" fill="#2f4a63"/>
+                <g fill="#3b5a76"><rect x="30" y="66" width="18" height="30"/><rect x="54" y="56" width="14" height="40"/><rect x="74" y="70" width="20" height="26"/><rect x="104" y="60" width="16" height="36"/><rect x="128" y="72" width="22" height="24"/></g>
+                <circle cx="164" cy="34" r="18" fill="#ffb03a" opacity="0.85"/>
+              </svg>
+            </div>
+            <div>
+              <h3>旧书摊的早晨：一座城市的阅读习惯</h3>
+              <p>在城市探索频道收录，记录三个旧书摊的开摊仪式与老读者。</p>
+            </div>
+          </article>
+
+          <article class="dn-index-item">
+            <div class="dn-index-thumb">
+              <svg viewBox="0 0 200 150" role="img" aria-label="厨房灶台与蒸汽的专题缩略图">
+                <rect width="200" height="150" fill="#2a1e1a"/>
+                <rect x="24" y="86" width="152" height="10" fill="#4b3428"/>
+                <ellipse cx="76" cy="78" rx="24" ry="10" fill="#5c4030"/>
+                <ellipse cx="128" cy="78" rx="24" ry="10" fill="#5c4030"/>
+                <path d="M70 60 q8 -14 0 -26 M84 60 q8 -14 0 -26 M122 58 q8 -14 0 -26" stroke="#c9a27a" stroke-width="2" fill="none" opacity="0.7"/>
+              </svg>
+            </div>
+            <div>
+              <h3>厨房里的三十分钟：家常菜的时间算法</h3>
+              <p>美食烹饪频道的实用技巧合集，附备菜顺序与火候对照表。</p>
+            </div>
+          </article>
+
+          <article class="dn-index-item">
+            <div class="dn-index-thumb">
+              <svg viewBox="0 0 200 150" role="img" aria-label="录音棚与波形图的专题缩略图">
+                <rect width="200" height="150" fill="#141c2e"/>
+                <g stroke="#32e0c8" stroke-width="3" fill="none" opacity="0.85">
+                  <path d="M20 76 H38 V54 H56 V96 H74 V66 H92 V84 H110 V48 H128 V90 H146 V70 H164 V80 H182"/>
+                </g>
+                <rect x="20" y="112" width="60" height="6" rx="3" fill="#2c4460"/>
+                <rect x="20" y="124" width="94" height="6" rx="3" fill="#233a52"/>
+              </svg>
+            </div>
+            <div>
+              <h3>声音先到现场：一次配乐与收音的对照实验</h3>
+              <p>创作幕后方向的深度内容，拆解同一段画面在三种声音方案下的差异。</p>
+            </div>
+          </article>
+
+          <article class="dn-index-item">
+            <div class="dn-index-thumb">
+              <svg viewBox="0 0 200 150" role="img" aria-label="跑步者在清晨跑道上的专题缩略图">
+                <rect width="200" height="150" fill="#12241f"/>
+                <path d="M0 118 Q50 100 100 116 T200 108 V150 H0 Z" fill="#1d3b30"/>
+                <circle cx="112" cy="62" r="10" fill="#6fe3a5"/>
+                <path d="M112 74 L100 100 M112 82 L130 92 M112 82 L96 92 M100 100 L88 118 M100 100 L116 120" stroke="#6fe3a5" stroke-width="5" fill="none" stroke-linecap="round"/>
+                <circle cx="40" cy="40" r="14" fill="#ffb03a" opacity="0.6"/>
+              </svg>
+            </div>
+            <div>
+              <h3>跑过四季：一位普通跑者的十二个月数据</h3>
+              <p>健康运动频道的长期记录，含配速、心率与伤病恢复的真实曲线。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 用户评价 -->
+  <section class="dn-section" id="dnComments">
+    <div class="dn-container">
+      <div class="dn-section-head">
+        <div>
+          <span class="dn-eyebrow">Voices · 用户评价</span>
+          <h2 class="dn-h2">社区里的真实声音</h2>
+          <p class="dn-lead">以下评价来自第一导航注册用户，未做删改。不同的长度与角度，构成品牌口碑的完整拼图。</p>
+        </div>
+      </div>
+
+      <div class="dn-comments">
+        <article class="dn-comment">
+          <div class="dn-comment-head">
+            <span class="dn-comment-avatar" style="background:linear-gradient(135deg,#32e0c8,#2a8fb8)">林</span>
+            <b>林间有风</b><span>注册 3 年</span>
+          </div>
+          <div class="dn-stars">★★★★★</div>
+          <p>很少见到把「不推荐什么」也写清楚的平台。第一导航的编辑手册让我第一次觉得，推荐是有依据的，不是玄学。</p>
+        </article>
+
+        <article class="dn-comment">
+          <div class="dn-comment-head">
+            <span class="dn-comment-avatar" style="background:linear-gradient(135deg,#ffb03a,#ff7a45)">陈</span>
+            <b>陈小满</b><span>注册 1 年</span>
+          </div>
+          <div class="dn-stars">★★★★☆</div>
+          <p>内容质量确实稳定，就是更新节奏偏慢，等一集要等挺久。不过转头想想，慢工出细活，也能理解。</p>
+        </article>
+
+        <article class="dn-comment">
+          <div class="dn-comment-head">
+            <span class="dn-comment-avatar" style="background:linear-gradient(135deg,#7c8dff,#4b5fd6)">郭</span>
+            <b>郭工</b><span>注册 5 年</span>
+          </div>
+          <div class="dn-stars">★★★★★</div>
+          <p>作为一个做器材测评的人，我很在意利益声明。第一导航强制标注测试条件这一点，在行业内算是少见且专业的做法。</p>
+        </article>
+
+        <article class="dn-comment">
+          <div class="dn-comment-head">
+            <span class="dn-comment-avatar" style="background:linear-gradient(135deg,#6fe3a5,#2f9e6b)">阿</span>
+            <b>阿岁不吃香菜</b><span>注册 2 年</span>
+          </div>
+          <div class="dn-stars">★★★★★</div>
+          <p>最喜欢「一间小店」专题，看完会想去楼下那家开了很多年的修表摊坐坐。这种内容不燃，但很暖。</p>
+        </article>
+
+        <article class="dn-comment">
+          <div class="dn-comment-head">
+            <span class="dn-comment-avatar" style="background:linear-gradient(135deg,#ff9db0,#e05a7a)">苏</span>
+            <b>苏打水没有气</b><span>注册 8 个月</span>
+          </div>
+          <div class="dn-stars">★★★★☆</div>
+          <p>投稿流程比想象中顺畅，反馈里有具体的修改建议，不是模板回复。唯一希望是审核时间能再快一点。</p>
+        </article>
+
+        <article class="dn-comment">
+          <div class="dn-comment-head">
+            <span class="dn-comment-avatar" style="background:linear-gradient(135deg,#c8a2ff,#8a5cf0)">老</span>
+            <b>老式收音机</b><span>注册 4 年</span>
+          </div>
+          <div class="dn-stars">★★★★★</div>
+          <p>从大学看到工作，第一导航算是陪我长大。以前只看视频，现在会认真读每条内容下面的创作说明。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 企业动态 + FAQ -->
+  <section class="dn-section dn-section-alt" id="dnNews">
+    <div class="dn-container">
+      <div class="dn-two-col">
+        <div>
+          <span class="dn-eyebrow">News · 企业动态</span>
+          <h2 class="dn-h2" style="margin-bottom:26px">第一导航企业动态与官方发布</h2>
+          <ul class="dn-news">
+            <li>
+              <time>2026-11-18</time>
+              <div><h3>创作激励计划 2026 冬季批次正式开放报名</h3><p>面向所有入驻创作者，单条精品内容最高奖励 5000 元，报名截止 12 月 15 日。</p></div>
+            </li>
+            <li>
+              <time>2026-11-12</time>
+              <div><h3>「城市夜行」第二季上线，首批 8 支 4K 短片同步开播</h3><p>本季新增夜间声音采集单元，全部内容提供中文字幕与音频描述。</p></div>
+            </li>
+            <li>
+              <time>2026-11-06</time>
+              <div><h3>第一导航与四家在地文化机构达成内容合作</h3><p>合作聚焦城市档案影像的数字化与再生产，首批内容将于明年春季上线。</p></div>
+            </li>
+            <li>
+              <time>2026-10-29</time>
+              <div><h3>创作者大会报名通道开启，12 月 6 日线下举行</h3><p>现场设四个工作坊与一场圆桌，讨论内容策展与创作者的长期生存。</p></div>
+            </li>
+          </ul>
+        </div>
+
+        <div id="dnFaq">
+          <span class="dn-eyebrow">FAQ · 常见问题</span>
+          <h2 class="dn-h2" style="margin-bottom:26px">关于第一导航的常见问题</h2>
+          <div class="dn-faq">
+            <details open>
+              <summary>第一导航是做什么的？和普通视频平台有什么不同？</summary>
+              <div class="dn-faq-body">第一导航是以视频为核心的内容导航平台，强调策展与筛选，而非无限推荐。我们保留清晰的频道分区与编辑说明，让用户明确知道自己在看什么、为什么被推荐。</div>
+            </details>
+            <details>
+              <summary>如何向第一导航投稿？审核周期大概多久？</summary>
+              <div class="dn-faq-body">可通过页面上的「我要投稿」入口提交作品信息与成片链接。常规审核周期为 5 到 7 个工作日，专题征集类项目会在截止后统一反馈，并附具体修改建议。</div>
+            </details>
+            <details>
+              <summary>平台对视频画质和格式有要求吗？</summary>
+              <div class="dn-faq-body">重点内容建议提供 1080p 及以上版本，优先 4K。支持常见封装格式，音频建议独立轨道。所有重点内容默认需要提供中文字幕文件。</div>
+            </details>
+            <details>
+              <summary>创作者的收入机制是怎样的？</summary>
+              <div class="dn-faq-body">采用基础稿酬 + 专项激励 + 品牌合作的组合模式。基础稿酬覆盖拍摄成本，专项激励支持长周期项目，品牌合作由平台统一对接并公开利益声明。</div>
+            </details>
+            <details>
+              <summary>我可以下载视频素材吗？</summary>
+              <div class="dn-faq-body">平台素材分为授权可用与仅观看两类，创作者后台可查询每段素材的使用范围。未经授权的内容不支持下载，这也是第一导航坚持正版的原因。</div>
+            </details>
+            <details>
+              <summary>口碑榜和热度榜有什么区别？</summary>
+              <div class="dn-faq-body">热度榜侧重播放与互动，口碑榜由用户评分、收藏率与完播率综合得出。两个榜单的目标不同，前者看传播，后者看长期评价。</div>
+            </details>
+            <details>
+              <summary>如何参与专题征集或比赛？</summary>
+              <div class="dn-faq-body">专题页会标注征集状态与截止日期，进入专题后按提示提交即可。比赛类项目会在企业动态中单独发布规则与评审标准。</div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 合作 + 投稿 CTA -->
+  <section class="dn-section" id="dnPartners">
+    <div class="dn-container">
+      <div class="dn-section-head">
+        <div>
+          <span class="dn-eyebrow">Partners · 合作伙伴</span>
+          <h2 class="dn-h2">与第一导航同行的机构与品牌</h2>
+          <p class="dn-lead">我们与专注内容品质的伙伴长期合作，共同推动影像内容的公共价值。</p>
+        </div>
+      </div>
+
+      <div class="dn-partners">
+        <div class="dn-partner"><b>江岸影像馆</b><span>城市档案影像合作</span></div>
+        <div class="dn-partner"><b>木与火工坊</b><span>手作内容联合出品</span></div>
+        <div class="dn-partner"><b>三十度户外</b><span>户外安全内容支持</span></div>
+        <div class="dn-partner"><b>晨间食研所</b><span>美食专题内容共建</span></div>
+      </div>
+
+      <div class="dn-cta" style="margin-top:44px">
+        <div>
+          <h2>你的影像，值得被导航到正确的位置</h2>
+          <p>无论你拍的是城市、手作、户外还是日常，第一导航都愿意为认真的内容留一个位置。提交作品，加入这个持续运营的内容社区。</p>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <button class="dn-btn dn-btn-solid" id="dnSubmitOpen2">立即投稿</button>
+          <button class="dn-btn dn-btn-ghost" data-dn-share="1">分享给朋友</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="dn-footer" id="dnFooter">
+  <div class="dn-container">
+    <div class="dn-footer-grid">
+      <div>
+        <div class="dn-logo" style="margin-bottom:14px">
+          <span class="dn-logo-mark">第</span>
+          <span>第一导航<small>VIDEO NAVIGATOR</small></span>
+        </div>
+        <p>第一导航官方网站 · 版权所有 · 持续运营中。以视频为核心的内容导航平台，坚持原创、正版与真实。</p>
+        <p style="margin-top:10px">合作与商务：bd@dy-navigator.example<br>投稿咨询：creator@dy-navigator.example</p>
+      </div>
+      <div>
+        <h3>内容频道</h3>
+        <ul>
+          <li><a href="#dnFocus">焦点内容</a></li>
+          <li><a href="#dnTopics">专题企划</a></li>
+          <li><a href="#dnRank">口碑榜单</a></li>
+          <li><a href="#dnAuthors">创作者名录</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>关于品牌</h3>
+        <ul>
+          <li><a href="#dnParse">品牌解析</a></li>
+          <li><a href="#dnNews">企业动态</a></li>
+          <li><a href="#dnPartners">合作伙伴</a></li>
+          <li><a href="#dnFaq">常见问题</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>参与方式</h3>
+        <ul>
+          <li><a href="#" data-dn-submit-link="1">作品投稿</a></li>
+          <li><a href="#" data-dn-share-link="1">分享本站</a></li>
+          <li><a href="#" data-dn-report-link="1">反馈与举报</a></li>
+          <li><a href="#dnComments">社区评价</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="dn-footer-bottom">
+      <span>© 2026 第一导航 版权所有 · 企业品牌官网 · 未经授权禁止转载</span>
+      <span>内容审核备案号：DY-NAV-2026-0118 · 网络文化经营许可已备案</span>
+    </div>
+  </div>
+</footer>
+
+<button class="dn-totop" id="dnToTop" aria-label="回到顶部">↑</button>
+<div class="dn-toast" id="dnToast" role="status" aria-live="polite"></div>
+
+<!-- 通用弹窗 -->
+<div class="dn-modal" id="dnModal">
+  <div class="dn-modal-card" id="dnModalCard" role="dialog" aria-modal="true" aria-labelledby="dnModalTitle"></div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* 工具 */
+  var toastEl = document.getElementById('dnToast');
+  var toastTimer = null;
+  function showToast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add('dn-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('dn-show'); }, 2200);
+  }
+
+  var modal = document.getElementById('dnModal');
+  var modalCard = document.getElementById('dnModalCard');
+  function openModal(html){
+    modalCard.innerHTML = html;
+    modal.classList.add('dn-open');
+    document.body.style.overflow = 'hidden';
+    var closeBtn = modalCard.querySelector('.dn-modal-close');
+    if(closeBtn){ closeBtn.focus(); }
+  }
+  function closeModal(){
+    modal.classList.remove('dn-open');
+    modalCard.innerHTML = '';
+    document.body.style.overflow = '';
+  }
+  modal.addEventListener('click', function(e){
+    if(e.target === modal || e.target.classList.contains('dn-modal-close')){ closeModal(); }
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && modal.classList.contains('dn-open')){ closeModal(); }
+  });
+
+  /* 移动端导航 */
+  var menuToggle = document.getElementById('dnMenuToggle');
+  var nav = document.getElementById('dnNav');
+  menuToggle.addEventListener('click', function(){
+    var open = nav.classList.toggle('dn-open');
+    menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menuToggle.textContent = open ? '✕' : '☰';
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A' && window.innerWidth <= 960){
+      nav.classList.remove('dn-open');
+      menuToggle.textContent = '☰';
+      menuToggle.setAttribute('aria-expanded','false');
+    }
+  });
+
+  /* 搜索反馈 */
+  var searchInput = document.getElementById('dnSearchInput');
+  var searchBtn = document.getElementById('dnSearchBtn');
+  var searchTip = document.getElementById('dnSearchTip');
+  var searchData = [
+    {k:'城市夜行',d:'专题 · 城市探索 · 8 支 4K 短片'},
+    {k:'剪辑节奏的七个判断',d:'教程干货 · 剪辑师老周 · 公开课'},
+    {k:'阿木工坊',d:'创作者 · 手作 DIY · 38 件作品'},
+    {k:'口碑榜',d:'榜单 · 年度用户评分综合榜'},
+    {k:'匠心手册',d:'专题 · 12 月 1 日首播 · 可预约'},
+    {k:'城市探索',d:'频道 · 在地文化 · 126 条内容'}
+  ];
+  function doSearch(){
+    var q = (searchInput.value || '').trim();
+    if(!q){
+      searchTip.innerHTML = '试试输入 <strong>城市夜行</strong>、<strong>剪辑</strong> 或 <strong>手作</strong>';
+      searchTip.classList.add('dn-open');
+      return;
+    }
+    var hits = searchData.filter(function(it){
+      return it.k.toLowerCase().indexOf(q.toLowerCase()) > -1 || it.d.toLowerCase().indexOf(q.toLowerCase()) > -1;
+    });
+    if(hits.length){
+      searchTip.innerHTML = '为你找到 <strong>' + hits.length + '</strong> 条与「' + q.replace(/[<>&]/g,'') + '」相关的内容：' +
+        hits.map(function(it){ return '<div style="margin-top:6px">· <strong>' + it.k + '</strong> — ' + it.d + '</div>'; }).join('');
+    }else{
+      searchTip.innerHTML = '暂未找到与「' + q.replace(/[<>&]/g,'') + '」直接匹配的内容，已记录你的搜索，编辑部会参考。';
+    }
+    searchTip.classList.add('dn-open');
+  }
+  searchBtn.addEventListener('click', doSearch);
+  searchInput.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ doSearch(); } });
+  searchInput.addEventListener('input', function(){ if(!searchInput.value){ searchTip.classList.remove('dn-open'); } });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.dn-search')){ searchTip.classList.remove('dn-open'); }
+  });
+
+  /* 点赞 / 收藏 */
+  document.addEventListener('click', function(e){
+    var likeBtn = e.target.closest('[data-dn-like]');
+    if(likeBtn){
+      var numEl = likeBtn.querySelector('b');
+      var base = parseInt(likeBtn.getAttribute('data-dn-base') || numEl.textContent, 10) || 0;
+      var cur = parseInt(numEl.textContent, 10) || base;
+      if(likeBtn.classList.contains('dn-active')){
+        likeBtn.classList.remove('dn-active');
+        numEl.textContent = Math.max(0, cur - 1);
+        showToast('已取消点赞');
+      }else{
+        likeBtn.classList.add('dn-active');
+        numEl.textContent = cur + 1;
+        showToast('已点赞，感谢支持');
+      }
+      return;
+    }
+    var favBtn = e.target.closest('[data-dn-fav]');
+    if(favBtn){
+      favBtn.classList.toggle('dn-active');
+      if(favBtn.classList.contains('dn-active')){
+        favBtn.textContent = '★ 已收藏';
+        showToast('已加入收藏夹');
+      }else{
+        favBtn.textContent = '☆ 收藏';
+        showToast('已取消收藏');
+      }
+      return;
+    }
+    var shareBtn = e.target.closest('[data-dn-share]');
+    if(shareBtn){ openShareModal(); return; }
+    var commentBtn = e.target.closest('[data-dn-comment]');
+    if(commentBtn){ openCommentModal(); return; }
+    var authorBtn = e.target.closest('[data-dn-author]');
+    if(authorBtn){ openAuthorModal(authorBtn.getAttribute('data-dn-author')); return; }
+    var submitLink = e.target.closest('[data-dn-submit-link]');
+    if(submitLink){ e.preventDefault(); openSubmitModal(); return; }
+    var shareLink = e.target.closest('[data-dn-share-link]');
+    if(shareLink){ e.preventDefault(); openShareModal(); return; }
+    var reportLink = e.target.closest('[data-dn-report-link]');
+    if(reportLink){ e.preventDefault(); openReportModal(); return; }
+  });
+
+  /* 分享 */
+  function openShareModal(){
+    openModal(
+      '<button class="dn-modal-close" aria-label="关闭">✕</button>' +
+      '<h3 class="dn-h3">分享第一导航</h3>' +
+      '<p>把好内容交给对的人。选择一种方式，或直接复制页面链接。</p>' +
+      '<div class="dn-share-row">' +
+        '<button data-dn-share-way="微信">微信好友</button>' +
+        '<button data-dn-share-way="朋友圈">朋友圈</button>' +
+        '<button data-dn-share-way="微博">微博</button>' +
+        '<button data-dn-share-way="QQ">QQ</button>' +
+      '</div>' +
+      '<div class="dn-modal-actions">' +
+        '<button class="dn-btn dn-btn-ghost" data-dn-copy="1">复制链接</button>' +
+        '<button class="dn-btn dn-btn-solid" data-dn-close="1">完成</button>' +
+      '</div>'
+    );
+  }
+
+  /* 评论弹窗 */
+  function openCommentModal(){
+    openModal(
+      '<button class="dn-modal-close" aria-label="关闭">✕</button>' +
+      '<h3 class="dn-h3">参与讨论</h3>' +
+      '<p>第一导航欢迎具体、友善的评论。请留下你对这条内容的看法。</p>' +
+      '<label for="dnCommentText">你的评论</label>' +
+      '<textarea id="dnCommentText" rows="4" placeholder="例如：夜骑那段的收音很真实，路口的车声没有被剪掉。"></textarea>' +
+      '<div class="dn-modal-actions">' +
+        '<button class="dn-btn dn-btn-ghost" data-dn-close="1">取消</button>' +
+        '<button class="dn-btn dn-btn-solid" data-dn-comment-send="1">提交评论</button>' +
+      '</div>'
+    );
+  }
+
+  /* 作者档案 */
+  var authorData = {
+    '江屿记录':{field:'城市探索 / 在地文化',works:'46 件作品',fans:'8.2 万粉丝',desc:'常驻江边的自由摄影师，偏好夜间与雨天拍摄。擅长用环境声构建叙事，作品多以单条街道为线索展开。曾参与第一导航「城市夜行」全季拍摄，并担任两期专题策展人。'},
+    '阿木工坊':{field:'手作 DIY / 生活方式',works:'38 件作品',fans:'5.6 万粉丝',desc:'三代木工家庭出身，把工坊搬进镜头。视频里很少说话，多是工具的响声。坚持每条作品附完整工序与材料清单，被用户称为「可以照着做的视频」。'},
+    '剪辑师老周':{field:'教程干货 / 创作幕后',works:'72 件作品',fans:'12.4 万粉丝',desc:'十年商业剪辑经验，做过广告也做过纪录片。擅长把抽象的节奏感拆成可练习的动作，课程被多所院校作为辅助教材，第一导航公开课常驻讲师。'},
+    '北纬三十度':{field:'户外活动 / 旅行见闻',works:'54 件作品',fans:'9.1 万粉丝',desc:'两人一车的户外组合，常年往返高原与海岸线。乐于分享失败经验，认为拍不到的日出比拍到的更值得讲。负责第一导航户外安全内容的顾问工作。'}
+  };
+  function openAuthorModal(name){
+    var d = authorData[name];
+    if(!d){ return; }
+    openModal(
+      '<button class="dn-modal-close" aria-label="关闭">✕</button>' +
+      '<h3 class="dn-h3">' + name + '</h3>' +
+      '<p><span class="dn-tag">' + d.field + '</span></p>' +
+      '<p style="margin-top:12px">' + d.desc + '</p>' +
+      '<div class="dn-meta-row" style="margin-top:16px">' +
+        '<span class="dn-author">' + d.works + '</span><span>' + d.fans + '</span><span>第一导航认证创作者</span>' +
+      '</div>' +
+      '<div class="dn-modal-actions"><button class="dn-btn dn-btn-solid" data-dn-close="1">知道了</button></div>'
+    );
+  }
+
+  /* 投稿 */
+  function openSubmitModal(){
+    openModal(
+      '<button class="dn-modal-close" aria-label="关闭">✕</button>' +
+      '<h3 class="dn-h3">投稿到第一导航</h3>' +
+      '<p>填写基本信息，编辑部会在 5 到 7 个工作日内邮件回复。</p>' +
+      '<label for="dnSubName">创作者昵称</label>' +
+      '<input id="dnSubName" type="text" placeholder="例如：江屿记录">' +
+      '<label for="dnSubTitle">作品标题</label>' +
+      '<input id="dnSubTitle" type="text" placeholder="例如：沿江十二公里">' +
+      '<label for="dnSubType">内容方向</label>' +
+      '<select id="dnSubType">' +
+        '<option>城市探索</option><option>手作 DIY</option><option>教程干货</option>' +
+        '<option>户外活动</option><option>美食烹饪</option><option>人物访谈</option><option>其他</option>' +
+      '</select>' +
+      '<label for="dnSubMail">联系邮箱</label>' +
+      '<input id="dnSubMail" type="email" placeholder="用于接收审核结果">' +
+      '<div class="dn-modal-actions">' +
+        '<button class="dn-btn dn-btn-ghost" data-dn-close="1">取消</button>' +
+        '<button class="dn-btn dn-btn-solid" data-dn-submit-send="1">提交投稿</button>' +
+      '</div>'
+    );
+  }
+
+  /* 反馈举报 */
+  function openReportModal(){
+    openModal(
+      '<button class="dn-modal-close" aria-label="关闭">✕</button>' +
+      '<h3 class="dn-h3">反馈与举报</h3>' +
+      '<p>如发现内容问题、版权争议或社区违规，请简要描述，我们会在两个工作日内处理。</p>' +
+      '<label for="dnReportType">问题类型</label>' +
+      '<select id="dnReportType">' +
+        '<option>内容错误</option><option>版权问题</option><option>不友善评论</option>' +
+        '<option>广告与引流</option><option>其他</option>' +
+      '</select>' +
+      '<label for="dnReportText">具体情况</label>' +
+      '<textarea id="dnReportText" rows="4" placeholder="请描述涉及的内容标题或创作者昵称"></textarea>' +
+      '<div class="dn-modal-actions">' +
+        '<button class="dn-btn dn-btn-ghost" data-dn-close="1">取消</button>' +
+        '<button class="dn-btn dn-btn-solid" data-dn-report-send="1">提交反馈</button>' +
+      '</div>'
+    );
+  }
+
+  /* 弹窗内动作 */
+  modalCard.addEventListener('click', function(e){
+    if(e.target.closest('[data-dn-close]')){ closeModal(); return; }
+    var way = e.target.closest('[data-dn-share-way]');
+    if(way){ showToast('已唤起' + way.getAttribute('data-dn-share-way') + '分享'); return; }
+    if(e.target.closest('[data-dn-copy]')){
+      var link = 'https://dy-navigator.example/first-navigation';
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(link).then(function(){ showToast('链接已复制'); }).catch(function(){ showToast('复制失败，请手动选择'); });
+      }else{
+        showToast('浏览器不支持自动复制，请手动复制');
+      }
+      return;
+    }
+    if(e.target.closest('[data-dn-comment-send]')){
+      var t = document.getElementById('dnCommentText');
+      if(!t || !t.value.trim()){ showToast('请先写下你的评论'); return; }
+      closeModal(); showToast('评论已提交，审核后展示');
+      return;
+    }
+    if(e.target.closest('[data-dn-submit-send]')){
+      var n = document.getElementById('dnSubName');
+      var ti = document.getElementById('dnSubTitle');
+      if(!n || !n.value.trim() || !ti || !ti.value.trim()){ showToast('请填写昵称与作品标题'); return; }
+      closeModal(); showToast('投稿已提交，请留意邮箱回复');
+      return;
+    }
+    if(e.target.closest('[data-dn-report-send]')){
+      closeModal(); showToast('反馈已收到，感谢你的帮助');
+      return;
+    }
+  });
+
+  document.getElementById('dnSubmitOpen').addEventListener('click', openSubmitModal);
+  document.getElementById('dnSubmitOpen2').addEventListener('click', openSubmitModal);
+  document.getElementById('dnShareOpenHero').addEventListener('click', openShareModal);
+
+  /* 榜单切换 */
+  var rankActions = {
+    hot: [
+      ['「城市夜行」第二季 01：沿江十二公里','江屿记录 · 城市探索','9.7'],
+      ['剪辑节奏的七个判断 · 完整版','剪辑师老周 · 教程干货','9.6'],
+      ['一间木工坊的三十七天','阿木工坊 · 手作 DIY','9.5'],
+      ['海拔 3800 米的一场日出','北纬三十度 · 户外活动','9.3'],
+      ['菜市场里的十种早餐','早八点半 · 美食烹饪','9.1'],
+      ['访谈：拍了十二年纪录片之后','第一导航出品 · 人物访谈','9.0']
+    ],
+    new: [
+      ['第一次拍街头，我只带了一支定焦','小满同学 · 城市探索','8.9'],
+      ['租房改造：三千元做出一个阅读角','住得舒服 · 家居收纳','8.8'],
+      ['给猫做的纸箱城堡，它只住了一晚','猫在窗台 · 萌宠日常','8.7'],
+      ['从零开始学陶艺的第 30 天','泥与手 · 手作 DIY','8.6'],
+      ['我用一周记录了楼下的早餐摊','早八点半 · 美食烹饪','8.5'],
+      ['骑行通勤 200 公里后的真实感受','风与链条 · 健康运动','8.4']
+    ],
+    praise: [
+      ['访谈：拍了十二年纪录片之后','第一导航出品 · 人物访谈','9.8'],
+      ['凌晨四点的批发市场，声音先醒过来','江屿记录 · 城市探索','9.7'],
+      ['榫卯入门：三个必须亲手做的接头','阿木工坊 · 手作 DIY','9.6'],
+      ['剪辑节奏的七个判断 · 完整版','剪辑师老周 · 教程干货','9.6'],
+      ['旧书摊的早晨：一座城市的阅读习惯','纸页之间 · 在地文化','9.4'],
+      ['跑过四季：一位普通跑者的十二个月','风与链条 · 健康运动','9.2']
+    ]
+  };
+  var rankList = document.getElementById('dnRankList');
+  document.querySelectorAll('.dn-rank-tab').forEach(function(tab){
+    tab.addEventListener('click', function(){
+      document.querySelectorAll('.dn-rank-tab').forEach(function(t){ t.classList.remove('dn-active'); });
+      tab.classList.add('dn-active');
+      var key = tab.getAttribute('data-dn-tab');
+      rankList.innerHTML = rankActions[key].map(function(row, i){
+        return '<li><span class="dn-rank-no">' + String(i+1).padStart(2,'0') + '</span>' +
+          '<span>' + row[0] + '<small>' + row[1] + '</small></span>' +
+          '<span class="dn-rank-score">' + row[2] + '</span></li>';
+      }).join('');
+      showToast('已切换至' + tab.textContent);
+    });
+  });
+
+  /* 数字滚动 */
+  var counters = document.querySelectorAll('[data-dn-count]');
+  var counted = false;
+  function runCounters(){
+    if(counted){ return; }
+    counted = true;
+    counters.forEach(function(el){
+      var target = parseInt(el.getAttribute('data-dn-count'), 10) || 0;
+      var start = null, dur = 1400;
+      function step(ts){
+        if(!start){ start = ts; }
+        var p = Math.min((ts - start) / dur, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.floor(target * eased).toLocaleString('en-US');
+        if(p < 1){ requestAnimationFrame(step); }
+        else{ el.textContent = target.toLocaleString('en-US') + '+'; }
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ runCounters(); io.disconnect(); } });
+    }, {threshold:.35});
+    if(counters.length){ io.observe(counters[0]); }
+  }else{
+    runCounters();
+  }
+
+  /* 回到顶部 */
+  var toTop = document.getElementById('dnToTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 620){ toTop.classList.add('dn-show'); }
+    else{ toTop.classList.remove('dn-show'); }
+  });
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  /* 卡片悬停与收藏点击的键盘可访问性补充 */
+  document.querySelectorAll('.dn-author-more').forEach(function(btn){
+    btn.setAttribute('type','button');
+  });
+  document.querySelectorAll('.dn-btn, .dn-act, .dn-mini-btn').forEach(function(btn){
+    if(!btn.getAttribute('type')){ btn.setAttribute('type','button'); }
+  });
+})();
+</script>
+
+</body>
+                                                  </html>
